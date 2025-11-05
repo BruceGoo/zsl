@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>赵露思穿搭合集 - 许我耀眼</title>
+    <meta name="description" content="赵露思在《许我耀眼》中的精美穿搭合集，包含品牌、价格、购买链接，一键搜索同款！支持微信分享。">
+    <meta name="keywords" content="赵露思,许我耀眼,穿搭,同款,时尚,明星同款">
+
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="style_v2.css">
+    <link rel="stylesheet" href="search-filter-styles.css">
+    <link rel="stylesheet" href="style_mobile_enhanced.css">
+
+    <style>
+        /* 页面特定样式 */
+        .header::before {
+            animation: rotate 25s linear infinite;
+        }
+
+        .main-content {
+            min-height: 60vh;
+        }
+
+        /* 确保移动端体验 */
+        @media (max-width: 768px) {
+            body {
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            * {
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            .outfit-card {
+                will-change: transform;
+            }
+
+            .item {
+                will-change: transform;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">许我耀眼</h1>
+            <p class="author">时尚穿搭合集</p>
+            <div class="subtitle-large">赵露思穿搭合集</div>
+        </div>
+    </header>
+
+    <!-- 导航标签 -->
+    <nav class="nav-tabs" id="episodes-nav">
+        <div class="container episodes-bar">
+            <div class="primary-episodes" id="primary-episodes">
+                <!-- 1-8集将动态生成 -->
+            </div>
+            <button id="toggle-more" class="tab-btn">
+                展开更多集数
+            </button>
+        </div>
+        <div class="container more-episodes" id="more-episodes">
+            <!-- 9+集将动态生成 -->
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <div id="outfit-container" class="outfit-grid">
+                <!-- 穿搭内容将通过 JavaScript 动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 赵露思穿搭合集. All rights reserved.</p>
+            <p style="font-size: 12px; margin-top: 8px; opacity: 0.7;">
+                仅供学习交流使用
+            </p>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="script_enhanced.js"></script>
+
+    <script>
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            // 显示移动端提示（可选）
+            if (isMobile()) {
+                console.log('移动端模式已启用');
+            }
+
+            // 预加载关键图片
+            preloadImages();
+        });
+
+        // 检测移动设备
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // 预加载关键资源
+        function preloadImages() {
+            const criticalImages = [
+                // 可以添加首屏需要的关键图片
+            ];
+
+            criticalImages.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        // 页面可见性API - 当页面重新激活时刷新数据
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                // 页面变为可见时，可以选择刷新数据
+                // console.log('页面重新激活');
+            }
+        });
+
+        // 处理离线/在线状态
+        window.addEventListener('online', () => {
+            console.log('网络已连接');
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('网络已断开');
+            showError('网络连接断开，请检查网络设置');
+        });
+    </script>
+</body>
+</html>

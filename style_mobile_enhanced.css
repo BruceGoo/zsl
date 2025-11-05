@@ -1,0 +1,580 @@
+/* ====== 移动端自适应增强样式 ====== */
+
+/* 移动端优先的响应式设计 */
+@media (max-width: 768px) {
+    /* 全局调整 */
+    html {
+        font-size: 14px;
+    }
+
+    body {
+        line-height: 1.6;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* 容器调整 */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* ====== 头部优化 ====== */
+    .header {
+        padding: 32px 0;
+    }
+
+    .main-title {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .author {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .subtitle-large {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    /* ====== 导航优化 ====== */
+    .nav-tabs {
+        padding: 16px 0;
+        position: sticky;
+        top: 0;
+    }
+
+    .episodes-bar {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        border-width: 1.5px;
+    }
+
+    .more-episodes {
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    #toggle-more {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* ====== 搜索框优化 ====== */
+    .search-container {
+        padding: 16px 0;
+        top: auto;
+        position: relative;
+    }
+
+    .search-input {
+        font-size: 1rem;
+        padding: 12px 44px 12px 18px;
+    }
+
+    .search-icon {
+        font-size: 1.1rem;
+        right: 14px;
+    }
+
+    /* ====== 筛选器优化 ====== */
+    .filters-container {
+        padding: 16px 0;
+        position: relative;
+        top: auto;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .filter-group label {
+        font-size: 0.9rem;
+    }
+
+    .filter-select,
+    .brand-filter-input {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .clear-filters-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    /* ====== 网格布局优化 ====== */
+    .outfit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    /* ====== 卡片优化 ====== */
+    .outfit-card {
+        border-radius: var(--radius-lg);
+        margin: 0;
+    }
+
+    .outfit-card::before {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .outfit-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .outfit-image {
+        aspect-ratio: 3 / 4;
+    }
+
+    .outfit-card:hover .outfit-image {
+        transform: scale(1.01);
+    }
+
+    .outfit-info {
+        padding: 16px;
+    }
+
+    .outfit-title {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+        border-bottom-width: 2px;
+    }
+
+    /* ====== 商品项优化 ====== */
+    .items-list {
+        max-height: 400px;
+    }
+
+    .item {
+        padding: 12px;
+        margin-bottom: 12px;
+        border-radius: var(--radius-sm);
+    }
+
+    .item:hover {
+        transform: translateX(4px);
+    }
+
+    .item:active {
+        transform: translateX(4px) scale(0.98);
+    }
+
+    .item-brand {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .item-name {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+
+    .item-price {
+        font-size: 1rem;
+    }
+
+    .item-action {
+        width: 32px;
+        height: 32px;
+    }
+
+    .item-action svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* ====== 模态框优化 ====== */
+    .modal-content {
+        max-width: 95%;
+    }
+
+    .modal-image {
+        max-height: 80vh;
+    }
+
+    .modal-title {
+        font-size: 1.1rem;
+        margin-top: 16px;
+    }
+
+    .modal-close {
+        top: -48px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 28px;
+    }
+
+    /* ====== 浮动按钮优化 ====== */
+    .fab {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        bottom: 24px;
+        right: 24px;
+    }
+
+    /* ====== 复制提示优化 ====== */
+    .copy-notification {
+        padding: 16px 32px;
+        font-size: 1rem;
+        max-width: 80%;
+    }
+}
+
+/* 超小屏幕优化 */
+@media (max-width: 480px) {
+    /* 容器 */
+    .container {
+        padding: 0 12px;
+    }
+
+    /* 头部 */
+    .header {
+        padding: 24px 0;
+    }
+
+    .main-title {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitle-large {
+        font-size: 1.2rem;
+    }
+
+    /* 导航 */
+    .nav-tabs {
+        padding: 12px 0;
+    }
+
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* 搜索 */
+    .search-input {
+        font-size: 0.95rem;
+        padding: 11px 40px 11px 16px;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+        right: 12px;
+    }
+
+    /* 网格 */
+    .outfit-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px 0;
+    }
+
+    /* 卡片 */
+    .outfit-card {
+        border-radius: var(--radius-md);
+    }
+
+    .outfit-info {
+        padding: 14px;
+    }
+
+    .outfit-title {
+        font-size: 1rem;
+    }
+
+    /* 商品项 */
+    .item {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .item-brand {
+        font-size: 0.85rem;
+    }
+
+    .item-name {
+        font-size: 0.8rem;
+    }
+
+    .item-price {
+        font-size: 0.95rem;
+    }
+
+    .item-action {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* 模态框 */
+    .modal-close {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+        top: -42px;
+    }
+
+    /* 浮动按钮 */
+    .fab {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* 横屏优化 */
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 20px 0;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle-large {
+        font-size: 1rem;
+    }
+
+    .outfit-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    /* 增大点击区域 */
+    .item {
+        padding: 16px;
+    }
+
+    .item-action {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* 移除悬停效果 */
+    .tab-btn:hover {
+        transform: none;
+    }
+
+    .outfit-card:hover {
+        transform: none;
+    }
+
+    /* 添加点击效果 */
+    .tab-btn:active {
+        transform: scale(0.95);
+    }
+
+    .outfit-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* 微信分享按钮样式 */
+.share-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all var(--transition-normal);
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.share-btn:hover,
+.share-btn:active {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.outfit-card:hover .share-btn,
+.outfit-card:active .share-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.share-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* 移动端分享按钮优化 */
+@media (max-width: 768px) {
+    .share-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        opacity: 0.9;
+        top: 8px;
+        left: 8px;
+    }
+
+    .share-btn svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* 分享菜单 */
+.share-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 24px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(100%);
+    transition: transform var(--transition-normal);
+    z-index: 10000;
+}
+
+.share-menu.show {
+    transform: translateY(0);
+}
+
+.share-menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.share-menu-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: var(--bg-light);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--text-light);
+}
+
+.share-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.share-option {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.share-option:hover {
+    background: var(--bg-light);
+}
+
+.share-option-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.share-option-icon.wechat {
+    background: #09b83e;
+}
+
+.share-option-icon.weibo {
+    background: #e6162d;
+}
+
+.share-option-icon.qq {
+    background: #12b7f5;
+}
+
+.share-option-icon.link {
+    background: var(--primary-color);
+}
+
+.share-option-label {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* 分享菜单遮罩 */
+.share-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    z-index: 9999;
+}
+
+.share-backdrop.show {
+    opacity: 1;
+}
+
+/* 移动端分享菜单优化 */
+@media (max-width: 480px) {
+    .share-menu {
+        padding: 20px 16px;
+    }
+
+    .share-option {
+        padding: 12px;
+    }
+
+    .share-option-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 22px;
+    }
+
+    .share-option-label {
+        font-size: 0.85rem;
+    }
+}

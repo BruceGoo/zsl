@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赵露思穿搭合集 - 许我耀眼</title>
+    <meta name="description" content="赵露思在《许我耀眼》中的精美穿搭合集，包含品牌、价格、购买链接，一键搜索同款！">
+    <meta name="keywords" content="赵露思,许我耀眼,穿搭,同款,时尚,明星同款">
+    <link rel="stylesheet" href="style_v2.css">
+    <style>
+        /* 搜索和筛选样式补充 */
+        .search-container {
+            background: white;
+            border-bottom: 1px solid rgba(255, 158, 196, 0.2);
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: block;
+            padding: 16px 24px;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius-xl);
+            outline: none;
+            transition: all var(--transition-normal);
+            background: white;
+        }
+
+        .search-input:focus {
+            box-shadow: 0 0 0 4px rgba(255, 158, 196, 0.2);
+            border-color: var(--primary-dark);
+        }
+
+        .search-results-count {
+            text-align: center;
+            margin-top: 12px;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .filters-container {
+            background: white;
+            border-bottom: 1px solid rgba(255, 158, 196, 0.1);
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .filter-group label {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .filter-select,
+        .brand-filter-input {
+            padding: 10px 16px;
+            border: 2px solid var(--primary-light);
+            border-radius: var(--radius-md);
+            outline: none;
+            transition: all var(--transition-normal);
+            font-size: 1rem;
+        }
+
+        .filter-select:focus,
+        .brand-filter-input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 158, 196, 0.15);
+        }
+
+        .brand-filter-input {
+            min-width: 200px;
+        }
+
+        .clear-filters-btn {
+            padding: 10px 20px;
+            background: var(--bg-light);
+            border: 2px solid var(--primary-light);
+            border-radius: var(--radius-md);
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            font-weight: 500;
+        }
+
+        .clear-filters-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--text-lighter);
+            font-size: 1.1rem;
+        }
+
+        .no-results p:first-child {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--text-light);
+        }
+
+        .fab {
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">许我耀眼</h1>
+            <p class="author">时尚穿搭合集</p>
+            <div class="subtitle-large">赵露思穿搭合集</div>
+        </div>
+    </header>
+
+    <!-- 导航标签 -->
+    <nav class="nav-tabs" id="episodes-nav">
+        <div class="container episodes-bar">
+            <div class="primary-episodes" id="primary-episodes">
+                <!-- 1-8集将动态生成 -->
+            </div>
+            <button id="toggle-more" class="tab-btn" style="border-radius: 10px; padding: 8px 16px; white-space: nowrap;">
+                展开更多集数
+            </button>
+        </div>
+        <div class="container more-episodes" id="more-episodes">
+            <!-- 9+集将动态生成 -->
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <div class="container">
+            <div id="outfit-container" class="outfit-grid">
+                <!-- 穿搭内容将通过 JavaScript 动态生成 -->
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 赵露思穿搭合集. All rights reserved.</p>
+            <p style="font-size: 12px; margin-top: 8px; opacity: 0.7;">
+                仅供学习交流使用
+            </p>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="script_v2.js"></script>
+    <script>
+        // 展开/收起更多集数
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleMoreBtn = document.getElementById('toggle-more');
+            const moreContainer = document.getElementById('more-episodes');
+
+            if (toggleMoreBtn && moreContainer) {
+                moreContainer.classList.remove('open');
+                toggleMoreBtn.addEventListener('click', () => {
+                    const open = moreContainer.classList.toggle('open');
+                    toggleMoreBtn.textContent = open ? '收起更多集数' : '展开更多集数';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

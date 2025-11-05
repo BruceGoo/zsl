@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "赵露思穿搭合集 - 许我耀眼",
+    "total_episodes": 32,
+    "total_outfits": 200,
+    "version": "2.0",
+    "updated": "2025-11-05"
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "outfits": [
+        {
+          "id": 1,
+          "title": "白色T恤休闲装",
+          "image": "pic/1/许妍同款穿搭第一集_2_Rosy夕夕_来自小红书网页版.jpg",
+          "items": [
+            {
+              "brand": "MondaySleepingClub",
+              "name": "T恤",
+              "price": "¥228",
+              "taobao_url": "https://s.taobao.com/search?q=MondaySleepingClub T恤"
+            },
+            {
+              "brand": "The fewfew",
+              "name": "短裤",
+              "price": "¥301",
+              "taobao_url": "https://s.taobao.com/search?q=The+fewfew 短裤"
+            },
+            {
+              "brand": "SUPERGA",
+              "name": "小白鞋",
+              "price": "¥399",
+              "taobao_url": "https://s.taobao.com/search?q=SUPERGA 小白鞋"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "米色优雅套装",
+          "image": "pic/1/许妍同款穿搭第一集_3_Rosy夕夕_来自小红书网页版.jpg",
+          "items": [
+            {
+              "brand": "韩代",
+              "name": "蝴蝶结发夹",
+              "price": "¥20",
+              "taobao_url": "https://s.taobao.com/search?q=韩代 蝴蝶结发夹"
+            },
+            {
+              "brand": "JORYA",
+              "name": "外套",
+              "price": "¥2696",
+              "taobao_url": "https://s.taobao.com/search?q=JORYA 外套"
+            },
+            {
+              "brand": "JORYA",
+              "name": "半裙",
+              "price": "¥2318",
+              "taobao_url": "https://s.taobao.com/search?q=JORYA 半裙"
+            },
+            {
+              "brand": "Hermes",
+              "name": "包包",
+              "price": "¥180000",
+              "taobao_url": "https://s.taobao.com/search?q=Hermes 包包"
+            },
+            {
+              "FAD ZOMO",
+              "name": "拖鞋（类似）",
+              "price": "¥219",
+              "taobao_url": "https://s.taobao.com/search?q=FAD+ZOMO 拖鞋"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "outfits": [
+        {
+          "id": 13,
+          "title": "黑色挂脖套装",
+          "image": "pic/2/许妍同款穿搭第二集_2_Rosy夕夕_来自小红书网页版.jpg",
+          "items": [
+            {
+              "brand": "亚历山大",
+              "name": "发夹",
+              "price": "¥1062",
+              "taobao_url": "https://s.taobao.com/search?q=亚历山大 发夹"
+            },
+            {
+              "brand": "Stella Vespertina",
+              "name": "上衣",
+              "price": "¥1260",
+              "taobao_url": "https://s.taobao.com/search?q=Stella+Vespertina 上衣"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

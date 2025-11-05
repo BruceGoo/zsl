@@ -1,0 +1,231 @@
+/* ====== 搜索和筛选功能增强样式 ====== */
+
+/* 搜索容器 */
+.search-container {
+    background: white;
+    border-bottom: 1px solid rgba(255, 158, 196, 0.2);
+    padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 8px rgba(255, 158, 196, 0.1);
+}
+
+.search-input-wrapper {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 16px 50px 16px 24px;
+    font-size: 1.1rem;
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-xl);
+    outline: none;
+    transition: all var(--transition-normal);
+    background: white;
+    box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(255, 158, 196, 0.2);
+    transform: translateY(-2px);
+}
+
+.search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+.search-results-count {
+    text-align: center;
+    margin-top: 16px;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+/* 筛选容器 */
+.filters-container {
+    background: white;
+    border-bottom: 1px solid rgba(255, 158, 196, 0.1);
+    padding: 20px 0;
+    position: sticky;
+    top: 140px;
+    z-index: 98;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.filter-group label {
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.filter-select {
+    padding: 10px 16px;
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all var(--transition-normal);
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: white;
+    min-width: 150px;
+}
+
+.filter-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 158, 196, 0.15);
+}
+
+.filter-select:hover {
+    border-color: var(--primary-color);
+}
+
+.brand-filter-input {
+    padding: 10px 16px;
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: all var(--transition-normal);
+    font-size: 0.95rem;
+    min-width: 200px;
+    background: white;
+}
+
+.brand-filter-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 158, 196, 0.15);
+}
+
+.clear-filters-btn {
+    padding: 10px 20px;
+    background: var(--bg-light);
+    border: 2px solid var(--primary-light);
+    border-radius: var(--radius-md);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.clear-filters-btn:hover {
+    background: var(--gradient-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.clear-filters-btn:active {
+    transform: translateY(0);
+}
+
+/* 无搜索结果 */
+.no-results {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-lighter);
+    font-size: 1.1rem;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-results p:first-child {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.no-results p:nth-child(2) {
+    font-size: 1rem;
+    color: var(--text-lighter);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .search-container {
+        padding: 16px 0;
+    }
+
+    .search-input {
+        font-size: 1rem;
+        padding: 14px 44px 14px 20px;
+    }
+
+    .filter-group {
+        gap: 12px;
+    }
+
+    .filter-group label {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filter-select,
+    .brand-filter-input {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .clear-filters-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-input {
+        font-size: 0.95rem;
+        padding: 12px 40px 12px 18px;
+    }
+
+    .search-icon {
+        font-size: 1rem;
+        right: 14px;
+    }
+
+    .filter-select,
+    .brand-filter-input {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+
+    .clear-filters-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
